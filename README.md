@@ -29,7 +29,7 @@ Create a timed function with name `name_args`
 `TIMED_BEGIN()`  
 Declare start of a timed function
 
-´TIMED_END()`  
+`TIMED_END()`  
 Declare end of a timed function
 
 `TIMED_LOCK()`  
@@ -39,12 +39,12 @@ Wait (and block) until the hardware timer is available
 Release the timer for other threads/functions to use
 
 `TIMED_WAIT(func, time, data)`  
-Wait a specified amount of time (default in us) and then call func (should be the same function from where this is called). Data is a ´void *` pointer
+Wait a specified amount of time (default in us) and then call func (should be the same function from where this is called). Data is a `void *` pointer
 to any custom data that needs to be stored during the wait. Will be available in `pdata` after the wait
 
 `TIMED_YIELD()`  
 Yield from the function after the wait time has passed, and continue next time the function is called. Should be used if the function should return
-back to the main program before the next ´TIMED_WAIT` or `TIMED_RELEASE`
+back to the main program before the next Â´TIMED_WAIT` or `TIMED_RELEASE`
 
 
 ## Caveats
@@ -83,7 +83,7 @@ void main(void)
 		{
 			if(resetCmd(0, CALLER_THREAD) == RETURN_DONE)
 			{
-				state == 1;
+				state = 1;
 			}
 		}
 		
